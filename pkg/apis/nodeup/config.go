@@ -332,6 +332,10 @@ func NewConfig(cluster *kops.Cluster, instanceGroup *kops.InstanceGroup) (*Confi
 		config.KubeletConfig = *instanceGroup.Spec.Kubelet
 	}
 
+	if instanceGroup.Spec.KubernetesVersion != "" {
+		config.KubernetesVersion = instanceGroup.Spec.KubernetesVersion
+	}
+
 	if instanceGroup.HasAPIServer() {
 		config.APIServerConfig = &APIServerConfig{
 			ClusterDNSDomain: cluster.Spec.ClusterDNSDomain,

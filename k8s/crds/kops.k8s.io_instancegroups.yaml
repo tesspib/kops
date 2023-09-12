@@ -806,6 +806,10 @@ spec:
                       volumes
                     type: string
                 type: object
+              kubernetesVersion:
+                description: KubernetesVersion overrides the Kubernetes version from
+                  the ClusterSpec
+                type: string
               machineType:
                 description: MachineType is the instance class
                 type: string

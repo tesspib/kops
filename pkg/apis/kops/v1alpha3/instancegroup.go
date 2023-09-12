@@ -104,6 +104,8 @@ type InstanceGroupSpec struct {
 	Tenancy string `json:"tenancy,omitempty"`
 	// Kubelet overrides kubelet config from the ClusterSpec
 	Kubelet *KubeletConfigSpec `json:"kubelet,omitempty"`
+	// KubernetesVersion overrides the Kubernetes version from the ClusterSpec
+	KubernetesVersion string `json:"kubernetesVersion,omitempty"`
 	// Taints indicates the kubernetes taints for nodes in this instance group
 	Taints []string `json:"taints,omitempty"`
 	// MixedInstancesPolicy defined a optional backing of an AWS ASG by a EC2 Fleet (AWS Only)
